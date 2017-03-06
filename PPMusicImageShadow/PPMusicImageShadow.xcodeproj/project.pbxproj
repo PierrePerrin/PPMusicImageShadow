@@ -8,16 +8,47 @@
 
 /* Begin PBXBuildFile section */
 		F94EE1041E6E03C20008FD15 /* PPMusicImageShadow.h in Headers */ = {isa = PBXBuildFile; fileRef = F94EE1021E6E03C20008FD15 /* PPMusicImageShadow.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F9726B9F1E6E044400F69D83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9726B9E1E6E044400F69D83 /* AppDelegate.swift */; };
+		F9726BA11E6E044400F69D83 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9726BA01E6E044400F69D83 /* ViewController.swift */; };
+		F9726BA41E6E044400F69D83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9726BA21E6E044400F69D83 /* Main.storyboard */; };
+		F9726BA61E6E044400F69D83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9726BA51E6E044400F69D83 /* Assets.xcassets */; };
+		F9726BA91E6E044400F69D83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9726BA71E6E044400F69D83 /* LaunchScreen.storyboard */; };
+		F9726BAF1E6E045A00F69D83 /* PPMusicImageShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9726BAE1E6E045A00F69D83 /* PPMusicImageShadow.swift */; };
+		F9726BB01E6E045A00F69D83 /* PPMusicImageShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9726BAE1E6E045A00F69D83 /* PPMusicImageShadow.swift */; };
+		F9726BB21E6E047A00F69D83 /* shadowMask.png in Resources */ = {isa = PBXBuildFile; fileRef = F9726BB11E6E047A00F69D83 /* shadowMask.png */; };
+		F9726BB31E6E047A00F69D83 /* shadowMask.png in Resources */ = {isa = PBXBuildFile; fileRef = F9726BB11E6E047A00F69D83 /* shadowMask.png */; };
+		F9726BB61E6E04F500F69D83 /* lotus-978659_1920.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9726BB41E6E04F500F69D83 /* lotus-978659_1920.jpg */; };
+		F9726BB91E6E05F800F69D83 /* prairie-679016_1920.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9726BB71E6E05F800F69D83 /* prairie-679016_1920.jpg */; };
+		F9726BBC1E6E063100F69D83 /* italy-2080072_640.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9726BBA1E6E063100F69D83 /* italy-2080072_640.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F94EE0FF1E6E03C20008FD15 /* PPMusicImageShadow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PPMusicImageShadow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F94EE1021E6E03C20008FD15 /* PPMusicImageShadow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPMusicImageShadow.h; sourceTree = "<group>"; };
 		F94EE1031E6E03C20008FD15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9726B9C1E6E044400F69D83 /* PPMusicImageShadowExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PPMusicImageShadowExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9726B9E1E6E044400F69D83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F9726BA01E6E044400F69D83 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F9726BA31E6E044400F69D83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F9726BA51E6E044400F69D83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F9726BA81E6E044400F69D83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F9726BAA1E6E044400F69D83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9726BAE1E6E045A00F69D83 /* PPMusicImageShadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPMusicImageShadow.swift; sourceTree = "<group>"; };
+		F9726BB11E6E047A00F69D83 /* shadowMask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shadowMask.png; sourceTree = "<group>"; };
+		F9726BB41E6E04F500F69D83 /* lotus-978659_1920.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "lotus-978659_1920.jpg"; sourceTree = "<group>"; };
+		F9726BB71E6E05F800F69D83 /* prairie-679016_1920.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "prairie-679016_1920.jpg"; sourceTree = "<group>"; };
+		F9726BBA1E6E063100F69D83 /* italy-2080072_640.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "italy-2080072_640.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		F94EE0FB1E6E03C20008FD15 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9726B991E6E044400F69D83 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -31,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				F94EE1011E6E03C20008FD15 /* PPMusicImageShadow */,
+				F9726B9D1E6E044400F69D83 /* PPMusicImageShadowExample */,
 				F94EE1001E6E03C20008FD15 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -39,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				F94EE0FF1E6E03C20008FD15 /* PPMusicImageShadow.framework */,
+				F9726B9C1E6E044400F69D83 /* PPMusicImageShadowExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -46,10 +79,28 @@
 		F94EE1011E6E03C20008FD15 /* PPMusicImageShadow */ = {
 			isa = PBXGroup;
 			children = (
+				F9726BAE1E6E045A00F69D83 /* PPMusicImageShadow.swift */,
+				F9726BB11E6E047A00F69D83 /* shadowMask.png */,
 				F94EE1021E6E03C20008FD15 /* PPMusicImageShadow.h */,
 				F94EE1031E6E03C20008FD15 /* Info.plist */,
 			);
 			path = PPMusicImageShadow;
+			sourceTree = "<group>";
+		};
+		F9726B9D1E6E044400F69D83 /* PPMusicImageShadowExample */ = {
+			isa = PBXGroup;
+			children = (
+				F9726B9E1E6E044400F69D83 /* AppDelegate.swift */,
+				F9726BA01E6E044400F69D83 /* ViewController.swift */,
+				F9726BA21E6E044400F69D83 /* Main.storyboard */,
+				F9726BB71E6E05F800F69D83 /* prairie-679016_1920.jpg */,
+				F9726BB41E6E04F500F69D83 /* lotus-978659_1920.jpg */,
+				F9726BBA1E6E063100F69D83 /* italy-2080072_640.jpg */,
+				F9726BA51E6E044400F69D83 /* Assets.xcassets */,
+				F9726BA71E6E044400F69D83 /* LaunchScreen.storyboard */,
+				F9726BAA1E6E044400F69D83 /* Info.plist */,
+			);
+			path = PPMusicImageShadowExample;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,16 +135,40 @@
 			productReference = F94EE0FF1E6E03C20008FD15 /* PPMusicImageShadow.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		F9726B9B1E6E044400F69D83 /* PPMusicImageShadowExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9726BAD1E6E044400F69D83 /* Build configuration list for PBXNativeTarget "PPMusicImageShadowExample" */;
+			buildPhases = (
+				F9726B981E6E044400F69D83 /* Sources */,
+				F9726B991E6E044400F69D83 /* Frameworks */,
+				F9726B9A1E6E044400F69D83 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PPMusicImageShadowExample;
+			productName = PPMusicImageShadowExample;
+			productReference = F9726B9C1E6E044400F69D83 /* PPMusicImageShadowExample.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		F94EE0F61E6E03C20008FD15 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Pierre Perrin";
 				TargetAttributes = {
 					F94EE0FE1E6E03C20008FD15 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = PCKYQNTV3N;
+						LastSwiftMigration = 0820;
+						ProvisioningStyle = Automatic;
+					};
+					F9726B9B1E6E044400F69D83 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = PCKYQNTV3N;
 						ProvisioningStyle = Automatic;
@@ -106,6 +181,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = F94EE0F51E6E03C20008FD15;
 			productRefGroup = F94EE1001E6E03C20008FD15 /* Products */;
@@ -113,6 +189,7 @@
 			projectRoot = "";
 			targets = (
 				F94EE0FE1E6E03C20008FD15 /* PPMusicImageShadow */,
+				F9726B9B1E6E044400F69D83 /* PPMusicImageShadowExample */,
 			);
 		};
 /* End PBXProject section */
@@ -122,6 +199,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9726BB21E6E047A00F69D83 /* shadowMask.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9726B9A1E6E044400F69D83 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9726BA91E6E044400F69D83 /* LaunchScreen.storyboard in Resources */,
+				F9726BA61E6E044400F69D83 /* Assets.xcassets in Resources */,
+				F9726BBC1E6E063100F69D83 /* italy-2080072_640.jpg in Resources */,
+				F9726BA41E6E044400F69D83 /* Main.storyboard in Resources */,
+				F9726BB91E6E05F800F69D83 /* prairie-679016_1920.jpg in Resources */,
+				F9726BB61E6E04F500F69D83 /* lotus-978659_1920.jpg in Resources */,
+				F9726BB31E6E047A00F69D83 /* shadowMask.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,10 +224,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9726BAF1E6E045A00F69D83 /* PPMusicImageShadow.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9726B981E6E044400F69D83 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9726BB01E6E045A00F69D83 /* PPMusicImageShadow.swift in Sources */,
+				F9726BA11E6E044400F69D83 /* ViewController.swift in Sources */,
+				F9726B9F1E6E044400F69D83 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F9726BA21E6E044400F69D83 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F9726BA31E6E044400F69D83 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F9726BA71E6E044400F69D83 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F9726BA81E6E044400F69D83 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		F94EE1051E6E03C20008FD15 /* Debug */ = {
@@ -240,6 +362,28 @@
 		F94EE1081E6E03C20008FD15 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = PCKYQNTV3N;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = PPMusicImageShadow/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = PP.PPMusicImageShadow;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		F94EE1091E6E03C20008FD15 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = PCKYQNTV3N;
@@ -254,23 +398,30 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
-			name = Debug;
+			name = Release;
 		};
-		F94EE1091E6E03C20008FD15 /* Release */ = {
+		F9726BAB1E6E044400F69D83 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				DEFINES_MODULE = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = PCKYQNTV3N;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = PPMusicImageShadow/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = PP.PPMusicImageShadow;
+				INFOPLIST_FILE = PPMusicImageShadowExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = PP.PPMusicImageShadowExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		F9726BAC1E6E044400F69D83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = PCKYQNTV3N;
+				INFOPLIST_FILE = PPMusicImageShadowExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = PP.PPMusicImageShadowExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -292,6 +443,15 @@
 			buildConfigurations = (
 				F94EE1081E6E03C20008FD15 /* Debug */,
 				F94EE1091E6E03C20008FD15 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9726BAD1E6E044400F69D83 /* Build configuration list for PBXNativeTarget "PPMusicImageShadowExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9726BAB1E6E044400F69D83 /* Debug */,
+				F9726BAC1E6E044400F69D83 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
