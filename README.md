@@ -37,7 +37,10 @@ If you prefer  you can clone the project, release the framework or use the view 
 
 ###Storyboard Example
 
-Insert a normal view in your viewController.
+Insert a normal UIView in your viewController.
+
+![alt tag](https://github.com/PierrePerrin/PPMusicImageShadow/blob/master/ExampleScreenShots/Storyboard%20screens/1.jpg)
+![alt tag](https://github.com/PierrePerrin/PPMusicImageShadow/blob/master/ExampleScreenShots/Storyboard%20screens/2.jpg)
 
 Change it class with "PPMusicImageShadow". Now you can set an image like an imageView, a blur radius, and a corner radius.
 
