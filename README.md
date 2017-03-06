@@ -4,7 +4,7 @@
 
 PPMusicImageShadow is a view that imitates in real time the shadow blurred effect of iOS Music App.
 
-![alt tag](https://raw.githubusercontent.com/PierrePerrin/PPMusicImageShadow/master/ExampleScreenShots/Simulator%20Screen%20Shot%206%20mars%202017%20à%2022.02.37.png)
+![alt tag](https://github.com/PierrePerrin/PPMusicImageShadow/blob/master/ExampleScreenShots/Simulator%20Screen%20Shot%206%20mars%202017%20à%2022.02.37.png)
 ![alt tag](https://github.com/PierrePerrin/PPMusicImageShadow/blob/master/ExampleScreenShots/Simulator%20Screen%20Shot%206%20mars%202017%20à%2022.04.20.png)
 ![alt tag](https://github.com/PierrePerrin/PPMusicImageShadow/blob/master/ExampleScreenShots/Simulator%20Screen%20Shot%206%20mars%202017%20à%2022.08.12.png)
 
