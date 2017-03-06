@@ -20,6 +20,8 @@
 		F9726BB61E6E04F500F69D83 /* lotus-978659_1920.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9726BB41E6E04F500F69D83 /* lotus-978659_1920.jpg */; };
 		F9726BB91E6E05F800F69D83 /* prairie-679016_1920.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9726BB71E6E05F800F69D83 /* prairie-679016_1920.jpg */; };
 		F9726BBC1E6E063100F69D83 /* italy-2080072_640.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9726BBA1E6E063100F69D83 /* italy-2080072_640.jpg */; };
+		F9726BC01E6E07BB00F69D83 /* ProgramingExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9726BBF1E6E07BB00F69D83 /* ProgramingExampleViewController.swift */; };
+		F9726BC11E6E07BB00F69D83 /* ProgramingExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9726BBF1E6E07BB00F69D83 /* ProgramingExampleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,7 @@
 		F9726BB41E6E04F500F69D83 /* lotus-978659_1920.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "lotus-978659_1920.jpg"; sourceTree = "<group>"; };
 		F9726BB71E6E05F800F69D83 /* prairie-679016_1920.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "prairie-679016_1920.jpg"; sourceTree = "<group>"; };
 		F9726BBA1E6E063100F69D83 /* italy-2080072_640.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "italy-2080072_640.jpg"; sourceTree = "<group>"; };
+		F9726BBF1E6E07BB00F69D83 /* ProgramingExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramingExampleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,8 +94,9 @@
 			isa = PBXGroup;
 			children = (
 				F9726B9E1E6E044400F69D83 /* AppDelegate.swift */,
-				F9726BA01E6E044400F69D83 /* ViewController.swift */,
 				F9726BA21E6E044400F69D83 /* Main.storyboard */,
+				F9726BBE1E6E079800F69D83 /* ProgramExample */,
+				F9726BBD1E6E078B00F69D83 /* StoryboardExample */,
 				F9726BB71E6E05F800F69D83 /* prairie-679016_1920.jpg */,
 				F9726BB41E6E04F500F69D83 /* lotus-978659_1920.jpg */,
 				F9726BBA1E6E063100F69D83 /* italy-2080072_640.jpg */,
@@ -101,6 +105,23 @@
 				F9726BAA1E6E044400F69D83 /* Info.plist */,
 			);
 			path = PPMusicImageShadowExample;
+			sourceTree = "<group>";
+		};
+		F9726BBD1E6E078B00F69D83 /* StoryboardExample */ = {
+			isa = PBXGroup;
+			children = (
+				F9726BA01E6E044400F69D83 /* ViewController.swift */,
+			);
+			name = StoryboardExample;
+			sourceTree = "<group>";
+		};
+		F9726BBE1E6E079800F69D83 /* ProgramExample */ = {
+			isa = PBXGroup;
+			children = (
+				F9726BBF1E6E07BB00F69D83 /* ProgramingExampleViewController.swift */,
+			);
+			name = ProgramExample;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9726BAF1E6E045A00F69D83 /* PPMusicImageShadow.swift in Sources */,
+				F9726BC01E6E07BB00F69D83 /* ProgramingExampleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9726BB01E6E045A00F69D83 /* PPMusicImageShadow.swift in Sources */,
+				F9726BC11E6E07BB00F69D83 /* ProgramingExampleViewController.swift in Sources */,
 				F9726BA11E6E044400F69D83 /* ViewController.swift in Sources */,
 				F9726B9F1E6E044400F69D83 /* AppDelegate.swift in Sources */,
 			);

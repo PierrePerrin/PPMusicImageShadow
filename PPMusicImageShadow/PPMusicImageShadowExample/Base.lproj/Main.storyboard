@@ -34,15 +34,21 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="blurRadius">
                                         <real key="value" value="7"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
-                                        <real key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T17-Ox-kpO">
+                                <rect key="frame" x="89.5" y="617" width="195" height="30"/>
+                                <state key="normal" title="Show programming example"/>
+                                <connections>
+                                    <segue destination="gv4-sv-oZI" kind="presentation" id="yOg-ml-gU0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="fkZ-V4-VmF" secondAttribute="trailing" constant="50" id="CKY-Ns-9zO"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="T17-Ox-kpO" secondAttribute="bottom" constant="20" id="UwY-c5-CAW"/>
+                            <constraint firstItem="T17-Ox-kpO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nUK-pg-t5m"/>
                             <constraint firstItem="fkZ-V4-VmF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="wZM-q1-cbw"/>
                             <constraint firstItem="fkZ-V4-VmF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="xBD-z8-lxl"/>
                         </constraints>
@@ -51,6 +57,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+        <!--Programing Example View Controller-->
+        <scene sceneID="MMe-6e-UJs">
+            <objects>
+                <viewController storyboardIdentifier="ProgramingExampleViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gv4-sv-oZI" customClass="ProgramingExampleViewController" customModule="PPMusicImageShadowExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aMm-WN-jbl"/>
+                        <viewControllerLayoutGuide type="bottom" id="uod-gM-Ggi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pHw-23-V4A">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fCu-cL-VJh">
+                                <rect key="frame" x="166" y="10" width="42" height="30"/>
+                                <state key="normal" title="return"/>
+                                <connections>
+                                    <action selector="dismiss:" destination="gv4-sv-oZI" eventType="touchUpInside" id="ZdQ-0w-YjD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fCu-cL-VJh" firstAttribute="centerX" secondItem="pHw-23-V4A" secondAttribute="centerX" id="3sR-T4-PGy"/>
+                            <constraint firstItem="fCu-cL-VJh" firstAttribute="top" secondItem="pHw-23-V4A" secondAttribute="topMargin" constant="10" id="ZIf-Ih-rUu"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OSK-tJ-mM4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="991" y="139"/>
         </scene>
     </scenes>
     <resources>

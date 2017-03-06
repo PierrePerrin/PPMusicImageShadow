@@ -9,7 +9,6 @@
 import UIKit
 import CoreGraphics
 
-@IBDesignable
 class PPMusicImageShadow: UIView {
     
     override var contentMode: UIViewContentMode{
