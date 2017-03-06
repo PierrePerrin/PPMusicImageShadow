@@ -44,7 +44,7 @@ Insert a normal UIView in your viewController.
 
 Change it class with "PPMusicImageShadow". Now you can set an image like an imageView, a blur radius, and a corner radius.
 
-###Programing example Example
+###Programing Example
 
 ```swift
 import PPMusicImageShadow
