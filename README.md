@@ -8,30 +8,80 @@ PPMusicImageShadow is a view that imitates in real time the shadow blurred effec
 ![alt tag](https://github.com/PierrePerrin/PPMusicImageShadow/blob/master/ExampleScreenShots/Simulator%20Screen%20Shot%206%20mars%202017%20à%2022.04.20.png)
 ![alt tag](https://github.com/PierrePerrin/PPMusicImageShadow/blob/master/ExampleScreenShots/Simulator%20Screen%20Shot%206%20mars%202017%20à%2022.08.12.png)
 
-## Code Example
-
-Show what the library does as concisely as possible, developers should be able to figure out **how** your project solves their problem by looking at the code example. Make sure the API you are showing off is obvious, and that your code is short and concise.
-
-## Motivation
-
-A short description of the motivation behind the creation and maintenance of the project. This should explain **why** the project exists.
-
 ## Installation
 
-Provide code examples and explanations of how to get the project.
+### CocoaPods
 
-## API Reference
+[CocoaPods](http://cocoapods.org) is a dependency manager for Cocoa projects. You can install it with the following command:
 
-Depending on the size of the project, if it is small and simple enough the reference docs can be added to the README. For medium size to larger projects it is important to at least provide a link to where the API reference docs live.
+```bash
+$ gem install cocoapods
+```
+To integrate PPMusicImageShadow into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
-## Tests
+```ruby
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '9.0'
+use_frameworks!
 
-Describe and show how to run the tests with code examples.
+target '<Your Target Name>' do
+pod 'PPMusicImageShadow'
+end
+```
 
-## Contributors
+### Manually
 
-Let people know how they can dive into the project, include important links to things like issue trackers, irc, twitter accounts if applicable.
+If you prefer  you can clone the project, release the framework or use the view swift file directly.
 
-## License
+## Code Example
 
-A short snippet describing the license (MIT, Apache, etc.)
+###Storyboard Example
+
+Insert a normal view in your viewController.
+
+Change it class with "PPMusicImageShadow". Now you can set an image like an imageView, a blur radius, and a corner radius.
+
+###Programing example Example
+
+```swift
+import PPMusicImageShadow
+
+class ProgramingExampleViewController: UIViewController {
+
+    var exampleView : PPMusicImageShadow!
+
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        self.addEffectView()
+        self.prepareExampleView()
+        self.setImageToExampleView()
+    }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+
+        self.exampleView.center = self.view.center
+    }
+
+    //MARK: Example
+    func addEffectView(){
+
+        self.exampleView = PPMusicImageShadow(frame: CGRect.init(x: 0, y: 0, width: 300, height: 300))
+        self.view.addSubview(self.exampleView)
+    }
+
+    func setImageToExampleView(){
+
+        let image = UIImage(named: "prairie-679016_1920.jpg")
+        self.exampleView.image = image
+    }
+
+    func prepareExampleView(){
+
+        self.exampleView.cornerRaduis = 10
+        self.exampleView.blurRadius = 5
+    }
+}
+```
