@@ -141,7 +141,7 @@ class PPMusicImageShadow: UIView {
         self.blurredImageView?.center.y = self.imageView.center.y + imageSize.height * 0.06
         
         let mask = CALayer()
-        mask.contents = UIImage.init(named: "shadowMask")?.cgImage
+        mask.contents =  UIImage.init(named: "shadowMask", in: Bundle.init(identifier: "PPMusicImageShadow"), compatibleWith: nil) ?? UIImage.init(named: "shadowMask")?.cgImage
         mask.frame =  self.blurredImageView!.bounds
         self.blurredImageView?.layer.mask = mask
         self.blurredImageView?.layer.masksToBounds = true
@@ -180,22 +180,5 @@ class PPMusicImageShadow: UIView {
         self.addSubview(imageView!)
         self.imageView?.contentMode = self.contentMode
         self.blurredImageView?.contentMode = self.contentMode
-    }
-}
-
-extension UIImage {
-    func resized(withPercentage percentage: CGFloat) -> UIImage? {
-        let canvasSize = CGSize(width: size.width * percentage, height: size.height * percentage)
-        UIGraphicsBeginImageContextWithOptions(canvasSize, false, scale)
-        defer { UIGraphicsEndImageContext() }
-        draw(in: CGRect(origin: .zero, size: canvasSize))
-        return UIGraphicsGetImageFromCurrentImageContext()
-    }
-    func resized(toWidth width: CGFloat) -> UIImage? {
-        let canvasSize = CGSize(width: width, height: CGFloat(ceil(width/size.width * size.height)))
-        UIGraphicsBeginImageContextWithOptions(canvasSize, false, scale)
-        defer { UIGraphicsEndImageContext() }
-        draw(in: CGRect(origin: .zero, size: canvasSize))
-        return UIGraphicsGetImageFromCurrentImageContext()
     }
 }
