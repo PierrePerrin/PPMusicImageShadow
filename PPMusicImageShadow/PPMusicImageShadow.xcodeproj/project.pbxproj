@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F91CF9D31F25275300BC1EE7 /* PPUIImage+size.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A30B191F2526D200999D44 /* PPUIImage+size.swift */; };
+		F91CF9D51F252DC800BC1EE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F91CF9D41F252DC800BC1EE7 /* Assets.xcassets */; };
 		F94EE1041E6E03C20008FD15 /* PPMusicImageShadow.h in Headers */ = {isa = PBXBuildFile; fileRef = F94EE1021E6E03C20008FD15 /* PPMusicImageShadow.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F9726B9F1E6E044400F69D83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9726B9E1E6E044400F69D83 /* AppDelegate.swift */; };
 		F9726BA11E6E044400F69D83 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9726BA01E6E044400F69D83 /* ViewController.swift */; };
@@ -16,8 +17,6 @@
 		F9726BA91E6E044400F69D83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9726BA71E6E044400F69D83 /* LaunchScreen.storyboard */; };
 		F9726BAF1E6E045A00F69D83 /* PPMusicImageShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9726BAE1E6E045A00F69D83 /* PPMusicImageShadow.swift */; };
 		F9726BB01E6E045A00F69D83 /* PPMusicImageShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9726BAE1E6E045A00F69D83 /* PPMusicImageShadow.swift */; };
-		F9726BB21E6E047A00F69D83 /* shadowMask.png in Resources */ = {isa = PBXBuildFile; fileRef = F9726BB11E6E047A00F69D83 /* shadowMask.png */; };
-		F9726BB31E6E047A00F69D83 /* shadowMask.png in Resources */ = {isa = PBXBuildFile; fileRef = F9726BB11E6E047A00F69D83 /* shadowMask.png */; };
 		F9726BB61E6E04F500F69D83 /* lotus-978659_1920.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9726BB41E6E04F500F69D83 /* lotus-978659_1920.jpg */; };
 		F9726BB91E6E05F800F69D83 /* prairie-679016_1920.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9726BB71E6E05F800F69D83 /* prairie-679016_1920.jpg */; };
 		F9726BBC1E6E063100F69D83 /* italy-2080072_640.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9726BBA1E6E063100F69D83 /* italy-2080072_640.jpg */; };
@@ -27,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F91CF9D41F252DC800BC1EE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F94EE0FF1E6E03C20008FD15 /* PPMusicImageShadow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PPMusicImageShadow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F94EE1021E6E03C20008FD15 /* PPMusicImageShadow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPMusicImageShadow.h; sourceTree = "<group>"; };
 		F94EE1031E6E03C20008FD15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -38,7 +38,6 @@
 		F9726BA81E6E044400F69D83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F9726BAA1E6E044400F69D83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F9726BAE1E6E045A00F69D83 /* PPMusicImageShadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPMusicImageShadow.swift; sourceTree = "<group>"; };
-		F9726BB11E6E047A00F69D83 /* shadowMask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shadowMask.png; sourceTree = "<group>"; };
 		F9726BB41E6E04F500F69D83 /* lotus-978659_1920.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "lotus-978659_1920.jpg"; sourceTree = "<group>"; };
 		F9726BB71E6E05F800F69D83 /* prairie-679016_1920.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "prairie-679016_1920.jpg"; sourceTree = "<group>"; };
 		F9726BBA1E6E063100F69D83 /* italy-2080072_640.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "italy-2080072_640.jpg"; sourceTree = "<group>"; };
@@ -87,7 +86,7 @@
 			children = (
 				F9A30B191F2526D200999D44 /* PPUIImage+size.swift */,
 				F9726BAE1E6E045A00F69D83 /* PPMusicImageShadow.swift */,
-				F9726BB11E6E047A00F69D83 /* shadowMask.png */,
+				F91CF9D41F252DC800BC1EE7 /* Assets.xcassets */,
 				F94EE1021E6E03C20008FD15 /* PPMusicImageShadow.h */,
 				F94EE1031E6E03C20008FD15 /* Info.plist */,
 			);
@@ -224,7 +223,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9726BB21E6E047A00F69D83 /* shadowMask.png in Resources */,
+				F91CF9D51F252DC800BC1EE7 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,7 +237,6 @@
 				F9726BA41E6E044400F69D83 /* Main.storyboard in Resources */,
 				F9726BB91E6E05F800F69D83 /* prairie-679016_1920.jpg in Resources */,
 				F9726BB61E6E04F500F69D83 /* lotus-978659_1920.jpg in Resources */,
-				F9726BB31E6E047A00F69D83 /* shadowMask.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

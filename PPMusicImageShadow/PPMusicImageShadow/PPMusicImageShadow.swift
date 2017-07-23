@@ -141,7 +141,9 @@ class PPMusicImageShadow: UIView {
         self.blurredImageView?.center.y = self.imageView.center.y + imageSize.height * 0.06
         
         let mask = CALayer()
-        mask.contents =  UIImage.init(named: "shadowMask", in: Bundle.init(identifier: "PPMusicImageShadow"), compatibleWith: nil) ?? UIImage.init(named: "shadowMask")?.cgImage
+        let imageName = "PPMusicImageShadowMask"
+        let image = UIImage.init(named: imageName, in:Bundle.init(identifier: "PPMusicImageShadow") ?? Bundle.init(for: self.classForCoder), compatibleWith: nil) ??  UIImage.init(named: imageName)
+        mask.contents =  image?.cgImage
         mask.frame =  self.blurredImageView!.bounds
         self.blurredImageView?.layer.mask = mask
         self.blurredImageView?.layer.masksToBounds = true
