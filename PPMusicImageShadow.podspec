@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name             = 'PPMusicImageShadow'
-s.version          = '0.9.2'
+s.version          = '0.9.3'
 s.summary          = 'iOS 10 Music Appshadow blur imitation'
 
 s.description      = <<-DESC
