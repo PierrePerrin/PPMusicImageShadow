@@ -18,7 +18,7 @@ class ViewController: UIViewController {
 
     @IBAction func slider1(_ sender: UISlider) {
         
-        imageView.blurRadius = CGFloat(sender.value * 8)
+        imageView.blurRadius = CGFloat(sender.value * 3)
     }
     
     @IBAction func slider2(_ sender: UISlider) {
@@ -28,6 +28,10 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
     }
 
 

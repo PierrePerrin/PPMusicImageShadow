@@ -17,7 +17,7 @@ class PPMusicImageShadow: UIView {
             
             self.imageView?.contentMode = newValue
             self.blurredImageView?.contentMode = newValue
-
+            
         }get{
             return super.contentMode
         }
@@ -46,7 +46,7 @@ class PPMusicImageShadow: UIView {
             imageWidth = self.frame.size.width;
             imageHeight = self.frame.size.height;
         }
-    
+        
         return CGSize(width: imageWidth, height: imageHeight)
     }
     
@@ -74,11 +74,14 @@ class PPMusicImageShadow: UIView {
     
     var imageView : UIImageView!
     var blurredImageView : UIImageView!
+    var blurWork : DispatchWorkItem?
     
     func calculateBlurredImage(){
+        
+        
         #if !TARGET_INTERFACE_BUILDER
-            
-            DispatchQueue.global(qos: DispatchQoS.QoSClass.userInteractive).async {
+            blurWork?.cancel()
+            blurWork = DispatchWorkItem(qos: DispatchQoS.userInteractive, flags: DispatchWorkItemFlags.noQoS) {
                 
                 if let imageToblur = self.image{
                     
@@ -101,25 +104,16 @@ class PPMusicImageShadow: UIView {
                     }
                     
                     guard
-                    let resizedImage = containerImage.resized(withPercentage: self.resizeConstant),
-                    let ciimage = CIImage.init(image:resizedImage),
+                        let resizedImage = containerImage.resized(withPercentage: self.resizeConstant),
+                        let ciimage = CIImage.init(image:resizedImage),
                         let blurredImage = self.applyBlur(ciimage: ciimage) else {return}
-                    
-                    let data1 = UIImageJPEGRepresentation(resizedImage, 1.0)
-                    let dir1 = NSHomeDirectory().appending("/Hellcont.jpg")
-                    try? data1?.write(to: URL.init(fileURLWithPath: dir1))
-                    print("dir : \(dir1)")
-                    let data = UIImageJPEGRepresentation(blurredImage, 1.0)
-                    let dir = NSHomeDirectory().appending("/Hello.jpg")
-                    try? data?.write(to: URL.init(fileURLWithPath: dir))
-                    print("dir : \(dir)")
                     
                     DispatchQueue.main.async {
                         self.blurredImageView?.image = blurredImage
                     }
                 }
             }
-            
+            blurWork?.perform()
             
         #else
             self.blurredImageView?.image = self.image
@@ -185,9 +179,8 @@ class PPMusicImageShadow: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        self.calculateBlurredImage()
         imageView?.frame = self.bounds
-
+        
         self.blurredImageView?.frame = self.bounds
         self.blurredImageView?.frame.size = getNewImageSize().scaled(by: shadowSizeConstant)
         
@@ -202,7 +195,6 @@ class PPMusicImageShadow: UIView {
         mask.frame =  self.blurredImageView!.bounds
         //self.blurredImageView?.layer.mask = mask
         self.blurredImageView?.layer.masksToBounds = false
-        
     }
     
     override init(frame: CGRect) {
@@ -232,10 +224,10 @@ class PPMusicImageShadow: UIView {
         
         imageView = UIImageView()
         blurredImageView = UIImageView()
-        self.calculateBlurredImage()
         self.addSubview(blurredImageView!)
         self.addSubview(imageView!)
         self.imageView?.contentMode = self.contentMode
         self.blurredImageView?.contentMode = self.contentMode
+        self.calculateBlurredImage()
     }
 }
