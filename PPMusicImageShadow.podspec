@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name             = 'PPMusicImageShadow'
-s.version          = '0.9.2.3'
+s.version          = '1.0'
 s.summary          = 'iOS 10 Music Appshadow blur imitation'
 
 s.description      = <<-DESC
@@ -9,9 +9,8 @@ DESC
 
 s.homepage         = 'https://github.com/PierrePerrin/PPMusicImageShadow'
 s.license          = { :type => 'MIT', :file => 'LICENSE' }
-s.author           = { '<YOUR NAME HERE>' => '<YOUR EMAIL HERE>' }
+s.author           = { 'Pierre' => 'Perrin' }
 s.source           = { :git => 'https://github.com/PierrePerrin/PPMusicImageShadow.git', :tag => s.version.to_s }
-s.resources = 'PPMusicImageShadow/PPMusicImageShadow/Assets.xcassets'
 s.ios.deployment_target = '9.0'
 s.source_files = 'PPMusicImageShadow/PPMusicImageShadow/*.swift'
 

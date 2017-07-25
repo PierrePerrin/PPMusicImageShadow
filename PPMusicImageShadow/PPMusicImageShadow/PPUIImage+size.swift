@@ -25,4 +25,24 @@ extension UIImage {
         draw(in: CGRect(origin: .zero, size: canvasSize))
         return UIGraphicsGetImageFromCurrentImageContext()
     }
+    
+    convenience init(layer: CALayer) {
+        UIGraphicsBeginImageContext(layer.frame.size)
+        layer.render(in: UIGraphicsGetCurrentContext()!)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        if let cgImage = image?.cgImage {
+            self.init(cgImage: cgImage)
+        } else {
+            self.init()
+        }
+    }
+}
+
+extension CGSize {
+    
+    func scaled(by percentage: CGFloat) -> CGSize {
+        return CGSize(width: width * percentage, height: height * percentage)
+    }
+    
 }

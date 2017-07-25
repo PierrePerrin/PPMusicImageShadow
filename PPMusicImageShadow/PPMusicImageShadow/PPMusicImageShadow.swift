@@ -23,7 +23,7 @@ class PPMusicImageShadow: UIView {
         }
     }
     
-    @IBInspectable var blurRadius : CGFloat = 10{
+    @IBInspectable var blurRadius : CGFloat = 3{
         didSet{
             self.calculateBlurredImage()
         }
@@ -46,9 +46,7 @@ class PPMusicImageShadow: UIView {
             imageWidth = self.frame.size.width;
             imageHeight = self.frame.size.height;
         }
-        
-       
-        
+    
         return CGSize(width: imageWidth, height: imageHeight)
     }
     
@@ -58,7 +56,7 @@ class PPMusicImageShadow: UIView {
         }
         set {
             imageView!.layer.cornerRadius = newValue
-            imageView!.layer.masksToBounds = true
+            imageView!.layer.masksToBounds = false
             
         }
     }
@@ -72,6 +70,8 @@ class PPMusicImageShadow: UIView {
         }
     }
     
+    var resizeConstant :CGFloat = 0.2
+    
     var imageView : UIImageView!
     var blurredImageView : UIImageView!
     
@@ -80,10 +80,39 @@ class PPMusicImageShadow: UIView {
             
             DispatchQueue.global(qos: DispatchQoS.QoSClass.userInteractive).async {
                 
-                if let imageToblur = self.image,
-                    let resizedImage = imageToblur.resized(withPercentage: 0.3),
+                if let imageToblur = self.image{
+                    
+                    let containerLayer = CALayer()
+                    containerLayer.frame = CGRect(origin: .zero, size: self.getNewImageSize().scaled(by: 1.4))
+                    containerLayer.backgroundColor = UIColor.clear.cgColor
+                    let blurImageLayer = CALayer()
+                    blurImageLayer.frame = CGRect(origin: CGPoint.init(x: self.getNewImageSize().width * self.resizeConstant, y: self.getNewImageSize().height * self.resizeConstant), size: self.getNewImageSize())
+                    blurImageLayer.contents = imageToblur.cgImage
+                    blurImageLayer.cornerRadius = self.cornerRaduis
+                    blurImageLayer.masksToBounds = false
+                    containerLayer.addSublayer(blurImageLayer)
+                    
+                    var containerImage = UIImage()
+                    // Get the UIImage from a UIView.
+                    if containerLayer.frame.size != CGSize.zero {
+                        containerImage = UIImage(layer: containerLayer)
+                    }else {
+                        containerImage = UIImage()
+                    }
+                    
+                    guard
+                    let resizedImage = containerImage.resized(withPercentage: self.resizeConstant),
                     let ciimage = CIImage.init(image:resizedImage),
-                    let blurredImage = self.applyBlur(ciimage: ciimage){
+                        let blurredImage = self.applyBlur(ciimage: ciimage) else {return}
+                    
+                    let data1 = UIImageJPEGRepresentation(resizedImage, 1.0)
+                    let dir1 = NSHomeDirectory().appending("/Hellcont.jpg")
+                    try? data1?.write(to: URL.init(fileURLWithPath: dir1))
+                    print("dir : \(dir1)")
+                    let data = UIImageJPEGRepresentation(blurredImage, 1.0)
+                    let dir = NSHomeDirectory().appending("/Hello.jpg")
+                    try? data?.write(to: URL.init(fileURLWithPath: dir))
+                    print("dir : \(dir)")
                     
                     DispatchQueue.main.async {
                         self.blurredImageView?.image = blurredImage
@@ -97,21 +126,41 @@ class PPMusicImageShadow: UIView {
         #endif
     }
     
+    @IBInspectable
+    public var shadowOffSet: CGSize = CGSize.init(width: 0, height: 0){
+        didSet{
+            self.layoutSubviews()
+        }
+    }
+    
+    @IBInspectable
+    public var shadowSizeConstant: CGFloat = 1.5{
+        didSet{
+            self.layoutSubviews()
+        }
+    }
+    
     func applyBlur(ciimage : CIImage) -> UIImage?{
         
         let overlay = CIImage.init(color: CIColor(color: UIColor(white: 0.0, alpha: 0.3)))
         overlay.cropping(to: ciimage.extent)
         
-        
         if let filter = CIFilter(name: "CIGaussianBlur") {
             
             filter.setValue(ciimage, forKey: kCIInputImageKey)
             filter.setValue(blurRadius, forKey: kCIInputRadiusKey)
-            let context = CIContext(options: nil)
+            let eaglContext =
+                EAGLContext(api: EAGLRenderingAPI.openGLES3)
+                    ??  EAGLContext(api: EAGLRenderingAPI.openGLES2)
+                    ??  EAGLContext(api: EAGLRenderingAPI.openGLES1)
+            
+            let context = eaglContext == nil ?
+                CIContext.init(options: nil)
+                : CIContext.init(eaglContext: eaglContext!)
+            
             if let output = filter.outputImage,
                 let cgimg = context.createCGImage(output, from: ciimage.extent)
             {
-                
                 return UIImage(cgImage: cgimg)
             }
         }
@@ -119,34 +168,40 @@ class PPMusicImageShadow: UIView {
         return nil
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        
-        imageView?.frame = self.bounds
+    var imageSize : CGRect!{
         var newBounds = CGRect.zero
-        
         let imageSize = getNewImageSize()
         
-        let addWidth :CGFloat = imageSize.width * 0.3
-        let addHeigth :CGFloat = imageSize.height * 0.3
+        let addWidth :CGFloat = imageSize.width * 1.2
+        let addHeigth :CGFloat = imageSize.height * 1.2
         
         let newWidth = imageSize.width + addWidth
         let newHeight = imageSize.height + addHeigth
         newBounds.size.width = newWidth
         newBounds.size.height = newHeight
-        newBounds.origin.y = 0
+        return newBounds
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
         
-        self.blurredImageView?.frame = newBounds
-        self.blurredImageView?.center = self.imageView.center
-        self.blurredImageView?.center.y = self.imageView.center.y + imageSize.height * 0.06
+        self.calculateBlurredImage()
+        imageView?.frame = self.bounds
+
+        self.blurredImageView?.frame = self.bounds
+        self.blurredImageView?.frame.size = getNewImageSize().scaled(by: shadowSizeConstant)
+        
+        self.blurredImageView?.center.x = self.imageView.center.x + shadowOffSet.width
+        self.blurredImageView?.center.y = self.imageView.center.y + shadowOffSet.height
+        self.blurredImageView.contentMode = .scaleAspectFit
         
         let mask = CALayer()
         let imageName = "PPMusicImageShadowMask"
         let image = UIImage.init(named: imageName, in:Bundle.init(identifier: "PPMusicImageShadow") ?? Bundle.init(for: self.classForCoder), compatibleWith: nil) ??  UIImage.init(named: imageName)
         mask.contents =  image?.cgImage
         mask.frame =  self.blurredImageView!.bounds
-        self.blurredImageView?.layer.mask = mask
-        self.blurredImageView?.layer.masksToBounds = true
+        //self.blurredImageView?.layer.mask = mask
+        self.blurredImageView?.layer.masksToBounds = false
         
     }
     

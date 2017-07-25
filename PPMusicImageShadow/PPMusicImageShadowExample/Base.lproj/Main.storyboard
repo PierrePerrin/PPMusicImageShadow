@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -31,28 +31,64 @@
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="image" keyPath="image" value="italy-2080072_640.jpg"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="blurRadius">
-                                        <real key="value" value="7"/>
-                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T17-Ox-kpO">
-                                <rect key="frame" x="89.5" y="617" width="195" height="30"/>
+                                <rect key="frame" x="90" y="617" width="195" height="30"/>
                                 <state key="normal" title="Show programming example"/>
                                 <connections>
                                     <segue destination="gv4-sv-oZI" kind="presentation" id="yOg-ml-gU0"/>
                                 </connections>
                             </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="igL-at-R8L">
+                                <rect key="frame" x="34" y="393" width="307" height="31"/>
+                                <connections>
+                                    <action selector="slider1:" destination="BYZ-38-t0r" eventType="valueChanged" id="Xoh-lQ-6eL"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="XkN-Ru-81Q">
+                                <rect key="frame" x="34" y="458" width="307" height="31"/>
+                                <connections>
+                                    <action selector="slider2:" destination="BYZ-38-t0r" eventType="valueChanged" id="bJ5-B7-BpH"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shadow size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ntb-Sr-74S">
+                                <rect key="frame" x="139" y="431" width="96" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shadow blur radius" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0A8-Ph-fW6">
+                                <rect key="frame" x="113.5" y="364" width="147" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="fkZ-V4-VmF" secondAttribute="trailing" constant="50" id="CKY-Ns-9zO"/>
+                            <constraint firstItem="XkN-Ru-81Q" firstAttribute="width" secondItem="igL-at-R8L" secondAttribute="width" id="DEN-wU-LXT"/>
+                            <constraint firstItem="XkN-Ru-81Q" firstAttribute="top" secondItem="igL-at-R8L" secondAttribute="bottom" constant="35" id="LkB-Br-5g5"/>
+                            <constraint firstItem="0A8-Ph-fW6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NkC-Lo-Tdv"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="T17-Ox-kpO" secondAttribute="bottom" constant="20" id="UwY-c5-CAW"/>
+                            <constraint firstItem="XkN-Ru-81Q" firstAttribute="centerX" secondItem="igL-at-R8L" secondAttribute="centerX" id="VJH-kX-gft"/>
+                            <constraint firstItem="XkN-Ru-81Q" firstAttribute="top" secondItem="ntb-Sr-74S" secondAttribute="bottom" constant="6" id="VNx-SH-Z0g"/>
+                            <constraint firstItem="igL-at-R8L" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XVA-kP-Qgl"/>
+                            <constraint firstItem="ntb-Sr-74S" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="e6a-X8-DcB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="igL-at-R8L" secondAttribute="trailing" constant="20" id="iyZ-ap-6hK"/>
+                            <constraint firstItem="XkN-Ru-81Q" firstAttribute="height" secondItem="igL-at-R8L" secondAttribute="height" id="jh1-iE-6gZ"/>
+                            <constraint firstItem="igL-at-R8L" firstAttribute="top" secondItem="fkZ-V4-VmF" secondAttribute="bottom" constant="110" id="lJi-tL-3SK"/>
                             <constraint firstItem="T17-Ox-kpO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nUK-pg-t5m"/>
+                            <constraint firstItem="igL-at-R8L" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="sqP-ua-lbF"/>
                             <constraint firstItem="fkZ-V4-VmF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="wZM-q1-cbw"/>
                             <constraint firstItem="fkZ-V4-VmF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="xBD-z8-lxl"/>
+                            <constraint firstItem="igL-at-R8L" firstAttribute="top" secondItem="0A8-Ph-fW6" secondAttribute="bottom" constant="8" id="yyt-dh-Cnc"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="fkZ-V4-VmF" id="yl5-RT-N6k"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
