@@ -1,3 +1,5 @@
+# Check my new repo for impoved performances and compatibility of this effect (Now compatible for all UIVIews) https://github.com/PierrePerrin/ShadowView
+
 # PPMusicImageShadow
 
 ## Synopsis
